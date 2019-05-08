@@ -22,6 +22,14 @@ public class StatusItem {
         StatusItem.podeCancelar = podeCancelar;
         StatusItem.compraConcluida = compraConcluida;
     }
+
+    public static void setPodeCancelar(boolean podeCancelar) {
+        StatusItem.podeCancelar = podeCancelar;
+    }
+
+    public static void setCompraConcluida(boolean compraConcluida) {
+        StatusItem.compraConcluida = compraConcluida;
+    }
    
     public static boolean getPodeCancelar() {
         return podeCancelar;

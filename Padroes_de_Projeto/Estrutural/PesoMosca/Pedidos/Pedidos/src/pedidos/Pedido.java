@@ -5,7 +5,7 @@
  */
 package pedidos;
 
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,10 +13,14 @@ import java.util.List;
  */
 class Pedido {
     
-    private List<ItemPedido> pedido;
+    private ArrayList<ItemPedido> pedido = new ArrayList();
+
+    public Pedido() {
+        
+    }
 
     void addItemPedido(ItemPedido item) {
-        this.pedido.add(item);
+        pedido.add(item);
     }
     
 }
