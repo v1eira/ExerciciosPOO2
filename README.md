@@ -12,3 +12,4 @@ Repositório da disciplina de POO2
 - [Comunicação e Servidores](https://coggle.it/diagram/XMtGWseK2RlLaLnl/t/comunica%C3%A7%C3%A3o-e-servidores)
 - [Padrão Peso Mosca](https://coggle.it/diagram/XNLBsqW0VPqKK5dF/t/padr%C3%A3o-peso-mosca)
 - [Padrão Observador](https://coggle.it/diagram/XNv-Ig1FzDiwsgTY/t/padr%C3%A3o-observador)
+- [Padrão Composite](https://coggle.it/diagram/XN1hMw1FzD-On2Cc/t/padr%C3%A3o-composite)
