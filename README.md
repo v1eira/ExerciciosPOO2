@@ -14,3 +14,4 @@ Repositório da disciplina de POO2
 - [Padrão Observador](https://coggle.it/diagram/XNv-Ig1FzDiwsgTY/t/padr%C3%A3o-observador)
 - [Padrão Composite](https://coggle.it/diagram/XN1hMw1FzD-On2Cc/t/padr%C3%A3o-composite)
 - [Padrão Cadeia de Responsabilidade](https://coggle.it/diagram/XOYI4o2eN3iEtOze/t/padr%C3%A3o-cadeia-de-responsabilidade)
+- [Padrão Template Método](https://coggle.it/diagram/XOak942eN4qiDp7T/t/padr%C3%A3o-template-m%C3%A9todo)
