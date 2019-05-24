@@ -15,20 +15,22 @@ import org.apache.poi.xwpf.usermodel.XWPFRun;
 
 /*Esse codigo esta uma bangunca..*/
 
-public class ExportFiles {
+public abstract class ExportFiles 
+{
 
     BufferedWriter out = null;
     XWPFDocument document;
     FileOutputStream out1 = null;
 
-    public ExportFiles() {
+    public ExportFiles() 
+    {
         String current = null;
         try {
             current = new java.io.File(".").getCanonicalPath();
             File file = new File(current + "\\src\\" + "index.html");
             FileWriter fw = new FileWriter(file.getAbsoluteFile());
             out = new BufferedWriter(fw);
-            out.write("<HTML><BODY>");
+            out.write("<html><body>");
         } catch (IOException ex) {
             Logger.getLogger(ExportFiles.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -37,64 +39,27 @@ public class ExportFiles {
             current = new java.io.File(".").getCanonicalPath();
             out1 = new FileOutputStream(new File(current + "\\src\\" + "word.docx"));
             document = new XWPFDocument();
-            //Blank Document
         } catch (IOException ex) {
             Logger.getLogger(ExportFiles.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
     
-    public void exportHTML(String txt){
+    public void export(String txt)
+    {
         String[] txtLinhas = txt.split("\n");
         for(Object linhas : txtLinhas )
         {
-            printLineHTML((String)linhas);
+            printline((String)linhas);
         }   
-        saveHTML();
-        
+        save();
     }
     
-    public void exportWord(String txt){
-             String[] txtLinhas = txt.split("\n");
-        for(Object linhas : txtLinhas )
-        {
-            printLineWord((String)linhas);
-        }   
-        saveWord();   
-    }
-
-    private void printLineHTML(String linha) {
-        try {
-            out.write("<BR>" + linha);
-        } catch (IOException ex) {
-            Logger.getLogger(ExportFiles.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    private void printLineWord(String linha) {
-        XWPFParagraph paragraph = document.createParagraph();
-        XWPFRun run = paragraph.createRun();
-        run.setText(linha);
-    }
-        
-    protected void saveWord() {
-        try {
-            document.write(out1);
-            out1.close();
-        } catch (IOException ex) {
-            Logger.getLogger(ExportFiles.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
     
-    protected void saveHTML() {
-        try {
-            out.write("</BODY>");
-            out.write("</HTML>");
-            out.close();
-        } catch (IOException ex) {
-            Logger.getLogger(ExportFiles.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-    }
+    public abstract void printline(String linha);
+    public abstract void save();
+        
+    
+    
 
 }
