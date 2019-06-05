@@ -15,3 +15,4 @@ Repositório da disciplina de POO2
 - [Padrão Composite](https://coggle.it/diagram/XN1hMw1FzD-On2Cc/t/padr%C3%A3o-composite)
 - [Padrão Cadeia de Responsabilidade](https://coggle.it/diagram/XOYI4o2eN3iEtOze/t/padr%C3%A3o-cadeia-de-responsabilidade)
 - [Padrão Template Método](https://coggle.it/diagram/XOak942eN4qiDp7T/t/padr%C3%A3o-template-m%C3%A9todo)
+- [Padrão Estratégia](https://coggle.it/diagram/XPeoK2UubBjATbkT/t/padr%C3%A3o-estrat%C3%A9gia)
