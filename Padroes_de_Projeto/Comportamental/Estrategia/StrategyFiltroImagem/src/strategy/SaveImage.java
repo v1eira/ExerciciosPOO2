@@ -41,7 +41,7 @@ public class SaveImage extends Component implements ActionListener {
             
             String current = new java.io.File(".").getCanonicalPath();                   
             
-            bi = ImageIO.read(new File(current + "\\src\\" + "praia.jpeg"));            
+            bi = ImageIO.read(new File(current + "//src//" + "praia.jpeg"));            
             w = bi.getWidth(null);
             h = bi.getHeight(null);
             if (bi.getType() != BufferedImage.TYPE_INT_RGB) {
@@ -77,6 +77,8 @@ public class SaveImage extends Component implements ActionListener {
     int lastOp;
     public void filterImage() {
         BufferedImageOp op = null;
+        
+        StrategyFilterImage filtro;
  
         if (opIndex == lastOp) {
             return;
@@ -88,19 +90,19 @@ public class SaveImage extends Component implements ActionListener {
                 biFiltered = bi;
                 return; 
         case 1:  /* low pass filter */
+            filtro = new LowPassFilter();
+            filtro.applyFilter();
+            op = filtro.op;
+            break;
         case 2:  /* sharpen */
-            float[] data = (opIndex == 1) ? BLUR3x3 : SHARPEN3x3;
-            op = new ConvolveOp(new Kernel(3, 3, data),
-                                ConvolveOp.EDGE_NO_OP,
-                                null);
+            filtro = new SharpenFilter();
+            filtro.applyFilter();
+            op = filtro.op;
             break;
         case 3 : /* lookup */
-            byte lut[] = new byte[256];
-            for (int j=0; j<256; j++) {
-                lut[j] = (byte)(256-j); 
-            }
-            ByteLookupTable blut = new ByteLookupTable(0, lut); 
-            op = new LookupOp(blut, null);
+            filtro = new LookupFilter();
+            filtro.applyFilter();
+            op = filtro.op;
             break;
         }
  
