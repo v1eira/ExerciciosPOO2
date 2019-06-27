@@ -17,3 +17,4 @@ Repositório da disciplina de POO2
 - [Padrão Template Método](https://coggle.it/diagram/XOak942eN4qiDp7T/t/padr%C3%A3o-template-m%C3%A9todo)
 - [Padrão Estratégia](https://coggle.it/diagram/XPeoK2UubBjATbkT/t/padr%C3%A3o-estrat%C3%A9gia)
 - [Padrão Comando](https://coggle.it/diagram/XQJP8iWFm9ooeVgk/t/padr%C3%A3o-comando)
+- [Padrão Memento](https://coggle.it/diagram/XRTov_IF0TiP7vkm/t/padr%C3%A3o-memento)
